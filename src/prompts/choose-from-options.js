@@ -9,13 +9,41 @@ console.log('--- loading prompt --> ');
  * @param {string} [instructions='pick one'] - to explain the options to the user
  * @returns {string} the selected option
  */
-const chooseFromOptions = () => {
+const chooseFromOptions = (options = ['yes', 'no'], instructions = 'pick one') => {
+
+  let userOption = '';
+  let userInput = '';
   // 1. render the options message for the user
+  const optionMessage = 'choose an option from the array option \n\n' + options;
+  console.log(optionMessage);
   // 2. begin an I/O loop
-  //  a. prompt the user with the message
-  //  b. continue if the user input is empty
-  //  c. continue if the user input is not in the options array
-  //  d. ask the user to confirm their choice
+  while (true) {
+    //  a. prompt the user with the message
+    const promptMessage = 'enter your option from the option array'
+    userInput = prompt(promptMessage);
+
+    //  b. continue if the user input is empty
+    if (userInput === '') {
+      alert('you enter nothing , Why ?');
+      continue;
+    }
+    //  c. continue if the user input is not in the options array
+    if (!options.includes(userInput)) {
+      alert('you did not enter an option from the array options');
+      continue;
+    }
+    //  d. ask the user to confirm their choice
+    const confirmMesseage = 'is this your option "' + userInput + '" is is correct';
+    let userConfrim = confirm(confirmMesseage);
+    if (userConfrim) {
+      userOption = userInput;
+      break;
+    } else {
+      alert('then what is your options');
+      continue;
+    }
+  }
+  return userOption;
 };
 
 {
@@ -25,9 +53,9 @@ const chooseFromOptions = () => {
   const globalConfirm = confirm;
   const globalAlert = alert;
   // over-write non-interactive I/O with empty functions
-  alert = () => {};
-  console.log = () => {};
-  // a function that simulates a user inputting a series of values
+  alert = () => { };
+  console.log = () => { };
+  //a  function that simulates a user inputting a series of values
   const mockUser = (values, index = 0) => () => values[index++];
 
   try {
@@ -67,3 +95,9 @@ const chooseFromOptions = () => {
   alert = globalAlert;
   console.log = consoleLog;
 }
+
+
+
+
+
+

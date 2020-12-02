@@ -7,11 +7,18 @@ console.log('--- loading logic --> ');
  * @param {string} [str=''] - the string to reverse
  * @returns {string} the reversed string
  */
-const reverseString = () => {};
+const reverseString = (str = '') => {
+  let reversedString = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    let nextCharacter = str[i];
+    reversedString = reversedString + nextCharacter;
+  }
+  return reversedString;
+};
 
 {
   const consoleLog = console.log;
-  console.log = () => {};
+  console.log = () => { };
 
   try {
     console.assert(reverseString() === '', 'Test 0');
@@ -25,4 +32,8 @@ const reverseString = () => {};
   }
 
   console.log = consoleLog;
+
+
+
+
 }
