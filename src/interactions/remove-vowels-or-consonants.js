@@ -7,7 +7,7 @@ console.log('--- loading interaction -->');
  */
 const removeVowelsOrConsonants = () => {
   // 1. if there is no saved word, call displayWord and exit early
-  if (savedWord === '' || savedWord === null) {
+  if (favoriteWord === '' || favoriteWord === null) {
     displayword();
     return;
   }
@@ -16,14 +16,14 @@ const removeVowelsOrConsonants = () => {
   // 3. use removeCharacters to create a new string
   //  remove all vowels (lower and upper case) if the user selected "vowels"
   if (select === 'vowels') {
-    let change = removeCharacters(savedWord, charactersToRemove = 'AEIOUaeiou');
+    let change = removeCharacters(favoriteWord, charactersToRemove = 'AEIOUaeiou');
   }
   //  remove all consonants (lower and upper case) if the user selected "consonants"
   if (select === 'consonants') {
-    change = removeCharacters(savedWord, charactersToRemove = 'bcdfghklmnpqrstvwxyzBCDFGHKLMNPQRSTVWXYZ');
+    change = removeCharacters(favoriteWord, charactersToRemove = 'bcdfghklmnpqrstvwxyzBCDFGHKLMNPQRSTVWXYZ');
   }
   // 4. render a final before/after message with favoriteWord and the new string from ^ up there
-  let finalMessage = beforeAndAfter(savedWord, change, description = 'all the vowels or all the consonants removed')
+  let finalMessage = beforeAndAfter(favoriteWord, change, description = 'all the vowels or all the consonants removed')
   // 5. alert the rendered message
 
   alert(finalMessage);

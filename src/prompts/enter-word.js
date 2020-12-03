@@ -10,36 +10,37 @@ console.log('--- loading prompt --> ');
  * @returns {string} the user input, it will not be empty
  */
 const enterWord = (message = 'enter a word') => {
-  let inputWord = '';
+  let favoriteWord = '';
   while (true) {
-    const promptMessage = 'please enter a word !';
+    const promptMessage = 'Please enter your favorite word !';
     let word = prompt(promptMessage);
     if (word === '' || word === null) {
-      alert('you enter nothing! why?');
+      alert('You enter nothing! why?');
       continue;
     }
     if (/^[a-z|-]*$/i.test(word)) {
-      inputWord = word;
-      const confirmMessage = 'this is your word "' + inputWord + '" is it correct ?';
+      favoriteWord = word;
+      const confirmMessage = 'Your favorite word is " ' + favoriteWord + '"    is it correct ?';
       const userConfirm = confirm(confirmMessage);
       if (userConfirm) {
-        alert(' this is your word "' + inputWord + '"');
+        alert(' Your favorite word is  "' + favoriteWord + '"');
         break;
       } else {
-        alert('then what is your word ?');
+        alert('Then what is your favorite word ?');
         continue
       }
 
 
     } else {
-      alert(' your word does not contain only  letters and hyphen!');
+      alert(' Your favorite word does not contain only  " letters and hyphen! "');
       continue;
     }
 
   }
-  return inputWord;
+  return favoriteWord;
 
 };
+module.exports = enterWord;
 
 {
   // store I/O functions and console.log for later
