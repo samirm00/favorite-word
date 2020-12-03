@@ -40,7 +40,7 @@ const enterWord = (message = 'enter a word') => {
   return favoriteWord;
 
 };
-module.exports = enterWord;
+
 
 {
   // store I/O functions and console.log for later

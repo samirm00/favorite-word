@@ -19,7 +19,7 @@ const chooseFromOptions = (options = ['yes', 'no'], instructions = 'pick one') =
   // 2. begin an I/O loop
   while (true) {
     //  a. prompt the user with the message
-    const promptMessage = 'enter your option from the option array'
+    const promptMessage = 'enter your option from the option array \n\n "' + options + '"'
     userInput = prompt(promptMessage);
 
     //  b. continue if the user input is empty

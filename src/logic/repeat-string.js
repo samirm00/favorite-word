@@ -9,11 +9,11 @@ console.log('--- loading logic --> ');
  * @returns {string} the repeated string
  */
 const repeatString = (text = '', repetitions = 1) => {
-  let repeatString = '';
+  let repString = '';
   for (let i = 0; i < repetitions; i++) {
-    repeatString += text;
+    repString += text;
   }
-  return repeatString;
+  return repString;
 };
 
 {

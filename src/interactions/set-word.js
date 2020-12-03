@@ -9,18 +9,17 @@ console.log('--- loading interaction -->');
  * if the user confirms, they enter a new word that replaces the old one.
  */
 const setWord = () => {
-  
-  let favoriteWord = enterWord('enter your favorite word!: ');
 
+  favoriteWord = enterWord('enter your favorite word!: ');
+
+  // const confirmMessage = ' Do you want to replace your favorite word "' + favoriteWord + '" ?';
+  // let userConfirm = confirm(confirmMessage);
+  // if (userConfirm) {
+  //   favoriteWord = prompt('Enter your replaced favorite word ');
+  // }
   if (favoriteWord === '') {
     alert(' You do not have favorite word ');
     return;
-  }
-   
-  const confirmMessage = ' Do you want to replace your favorite word "' + favoriteWord + '" ?';
-  let userConfirm = confirm(confirmMessage);
-  if (userConfirm) {
-    favoriteWord = prompt('Enter your replaced favorite word ');
   }
 
 };
