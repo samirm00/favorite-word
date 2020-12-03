@@ -8,7 +8,40 @@ console.log('--- loading prompt --> ');
  * @param {string} [message='enter a number'] - the text displayed to the user
  * @returns {number} a number cast from the user input (never NaN)
  */
-const enterNumber = () => {};
+const enterNumber = (message = 'enter a number') => {
+  let userNumber = 0;
+  while (true) {
+    let promptMessage = 'Please , enter a number '
+    let userInput = prompt(promptMessage);
+    if (userInput === '' || userInput === null) {
+      alert('You enter nothing! why?')
+      continue;
+    }
+
+    userNumber = Number(userInput);
+    if (Number.isNaN(userNumber)) {
+      alert(' you did not enter a number!');
+      continue;
+    }
+
+    confirmMessage = 'your number is "' + userNumber + '" is that correct ?';
+    userConfirm = confirm(confirmMessage);
+
+    if (userConfirm) {
+      finalMessgae = 'your number is "' + userNumber + '"';
+      alert(finalMessgae);
+      break;
+
+    } else {
+      alert(' then what is your number');
+      continue;
+    }
+
+
+  }
+  return userNumber;
+
+};
 
 {
   // store I/O functions and console.log for later
@@ -17,8 +50,8 @@ const enterNumber = () => {};
   const globalConfirm = confirm;
   const globalAlert = alert;
   // over-write non-interactive I/O with empty functions
-  alert = () => {};
-  console.log = () => {};
+  alert = () => { };
+  console.log = () => { };
   // a function that simulates a user inputting a series of values
   const mockUser = (values, index = 0) => () => values[index++];
 

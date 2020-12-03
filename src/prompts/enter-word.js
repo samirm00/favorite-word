@@ -9,8 +9,36 @@ console.log('--- loading prompt --> ');
  * @param {string} [message='enter a word'] - what the user will read in the prompt
  * @returns {string} the user input, it will not be empty
  */
-const enterWord = () => {
-  // there is a hint at the bottom of this page
+const enterWord = (message = 'enter a word') => {
+  let inputWord = '';
+  while (true) {
+    const promptMessage = 'please enter a word !';
+    let word = prompt(promptMessage);
+    if (word === '' || word === null) {
+      alert('you enter nothing! why?');
+      continue;
+    }
+    if (/^[a-z|-]*$/i.test(word)) {
+      inputWord = word;
+      const confirmMessage = 'this is your word "' + inputWord + '" is it correct ?';
+      const userConfirm = confirm(confirmMessage);
+      if (userConfirm) {
+        alert(' this is your word "' + inputWord + '"');
+        break;
+      } else {
+        alert('then what is your word ?');
+        continue
+      }
+
+
+    } else {
+      alert(' your word does not contain only  letters and hyphen!');
+      continue;
+    }
+
+  }
+  return inputWord;
+
 };
 
 {
@@ -20,8 +48,8 @@ const enterWord = () => {
   const globalConfirm = confirm;
   const globalAlert = alert;
   // over-write non-interactive I/O with empty functions
-  alert = () => {};
-  console.log = () => {};
+  alert = () => { };
+  console.log = () => { };
   // a function that simulates a user inputting a series of values
   const mockUser = (values, index = 0) => () => values[index++];
 

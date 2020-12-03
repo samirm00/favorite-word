@@ -9,11 +9,18 @@ console.log('--- loading render --> ');
  * @param {string} [description=''] - describing what changes were made
  * @returns {string} a formatted before/after message
  */
-const beforeAndAfter = () => {};
+const beforeAndAfter = (before, after, description = '') => {
+  let formattedString = `${description}\nbefore: "${before}"\nafter: "${after}"`;
+  if (description === '') {
+    formattedString = `before: "${before}"\nafter: "${after}"`;
+
+  }
+  return formattedString;
+};
 
 {
   const consoleLog = console.log;
-  console.log = () => {};
+  console.log = () => { };
 
   try {
     console.assert(
@@ -26,12 +33,12 @@ const beforeAndAfter = () => {};
     );
     console.assert(
       beforeAndAfter('', '', 'all done!') ===
-        'all done!\nbefore: ""\nafter: ""',
+      'all done!\nbefore: ""\nafter: ""',
       'Test 2'
     );
     console.assert(
       beforeAndAfter('start', 'finish', 'all done!') ===
-        'all done!\nbefore: "start"\nafter: "finish"',
+      'all done!\nbefore: "start"\nafter: "finish"',
       'Test 3'
     );
   } catch (err) {

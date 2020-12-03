@@ -8,11 +8,19 @@ console.log('--- loading logic --> ');
  * @param {string} [charactersToRemove=''] - string of characters to remove
  * @returns {string} new string with all provided characters removed
  */
-const removeCharacters = () => {};
+const removeCharacters = (text = '', charactersToRemove = '') => {
+  let newString = '';
+  for (const character of text) {
+    if (charactersToRemove.search(character) === -1) {
+      newString = newString + character;
+    }
+  }
+  return newString;
+};
 
 {
   const consoleLog = console.log;
-  console.log = () => {};
+  console.log = () => { };
 
   try {
     console.assert(removeCharacters('asdf') === 'asdf', 'Test 0 a');

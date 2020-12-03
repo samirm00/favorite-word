@@ -14,7 +14,7 @@ const chooseFromOptions = (options = ['yes', 'no'], instructions = 'pick one') =
   let userOption = '';
   let userInput = '';
   // 1. render the options message for the user
-  const optionMessage = 'choose an option from the array option \n\n' + options;
+  const optionMessage = 'choose an option from the array option \n\n "' + options + '"';
   console.log(optionMessage);
   // 2. begin an I/O loop
   while (true) {
@@ -33,7 +33,7 @@ const chooseFromOptions = (options = ['yes', 'no'], instructions = 'pick one') =
       continue;
     }
     //  d. ask the user to confirm their choice
-    const confirmMesseage = 'is this your option "' + userInput + '" is is correct';
+    const confirmMesseage = ' your option "' + userInput + '" is it correct';
     let userConfrim = confirm(confirmMesseage);
     if (userConfrim) {
       userOption = userInput;
