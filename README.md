@@ -30,7 +30,7 @@ The program is a part of HYF BE boot camp curriculum , the main goal , is using 
 * study-lenses 0.0.50
 
 ## Setup
-open index.html and enjoy! typing your favorite-word
+open index.html in your browser and enjoy! typing your favorite-word
 
 ## Code Examples
 
