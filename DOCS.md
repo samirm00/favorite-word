@@ -8,6 +8,7 @@
 
 - [data.js](#srcdatajs)
 - [interactions](#interactions)
+  - [clear-word.js](#srcinteractionsclear-wordjs)
   - [repeat-word-or-characters.js](#srcinteractionsrepeat-word-or-charactersjs)
   - [reverse-word.js](#srcinteractionsreverse-wordjs)
   - [set-word.js](#srcinteractionsset-wordjs)
@@ -51,6 +52,17 @@ Here are some general rules for your interaction functions:
 - they should not return any values
 - they can use functions declared in `/logic`, `/prompts` and `/renders`
 - they can read and modify data variables stored in data.js
+
+---
+
+## [./src/interactions/clear-word.js](./src/interactions/clear-word.js?study)
+
+<a name="clearWord"></a>
+
+## clearWord()
+
+if there is a favorite word, the user is asked to confirm before clearing it.
+if there is no saved word the user is told there is no word to clear
 
 ---
 
