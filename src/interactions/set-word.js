@@ -10,7 +10,7 @@ console.log('--- loading interaction -->');
  */
 const setWord = () => {
 
-  favoriteWord = enterWord('enter your favorite word!: ');
+   favoriteWord = enterWord('enter your favorite word!: ');
 
   // const confirmMessage = ' Do you want to replace your favorite word "' + favoriteWord + '" ?';
   // let userConfirm = confirm(confirmMessage);
