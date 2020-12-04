@@ -23,7 +23,7 @@ The program is a part of HYF BE boot camp curriculum , the main goal , is using 
 ## Technologies
 * JavaScript
 * HTML
-* css
+* CSS
 * VSC code
 * node 14.15.1
 * npm 6.14.9
