@@ -10,6 +10,7 @@
 - [interactions](#interactions)
   - [clear-word.js](#srcinteractionsclear-wordjs)
   - [display-word.js](#srcinteractionsdisplay-wordjs)
+  - [remove-vowels-or-consonants.js](#srcinteractionsremove-vowels-or-consonantsjs)
   - [repeat-word-or-characters.js](#srcinteractionsrepeat-word-or-charactersjs)
   - [reverse-word.js](#srcinteractionsreverse-wordjs)
   - [set-word.js](#srcinteractionsset-wordjs)
@@ -77,6 +78,16 @@ if there is no saved word the user is told there is no word to clear
 
 displays the saved word if there is one.
 if there is no saved word, it tells the user so
+
+---
+
+## [./src/interactions/remove-vowels-or-consonants.js](./src/interactions/remove-vowels-or-consonants.js?study)
+
+<a name="removeVowelsOrConsonants"></a>
+
+## removeVowelsOrConsonants()
+
+allows a user to see their word with all the vowels or all the consonants removed
 
 ---
 
