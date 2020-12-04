@@ -9,9 +9,11 @@
 - [data.js](#srcdatajs)
 - [interactions](#interactions)
   - [repeat-word-or-characters.js](#srcinteractionsrepeat-word-or-charactersjs)
+  - [reverse-word.js](#srcinteractionsreverse-wordjs)
 - [logic](#logic)
   - [repeat-characters.js](#srclogicrepeat-charactersjs)
   - [repeat-string.js](#srclogicrepeat-stringjs)
+  - [reverse-string.js](#srclogicreverse-stringjs)
 - [prompts](#prompts)
 - [renders](#renders)
 
@@ -55,6 +57,17 @@ Here are some general rules for your interaction functions:
 
 allows a user to see either the whole word repeated, or their word with each character repeated.
 if there is no word, the user is told so
+
+---
+
+## [./src/interactions/reverse-word.js](./src/interactions/reverse-word.js?study)
+
+<a name="reverseWord"></a>
+
+## reverseWord()
+
+allows a user to set a new value for the saved word.
+if there's already a saved word, they are asked to confirm replacing it
 
 [TOP](#DOCS)
 
@@ -106,6 +119,22 @@ repeats a string a given number of times
 | ------------- | ------------------- | ------------------------------------- | ---------------------------------- |
 | [text]        | <code>string</code> | <code>&quot;&#x27;&#x27;&quot;</code> | the string to repeat               |
 | [repetitions] | <code>number</code> | <code>1</code>                        | how many time to repeat the string |
+
+---
+
+## [./src/logic/reverse-string.js](./src/logic/reverse-string.js?study)
+
+<a name="reverseString"></a>
+
+## reverseString([str]) ⇒ <code>string</code>
+
+reverses a string
+
+**Returns**: <code>string</code> - the reversed string
+
+| Param | Type                | Default                               | Description           |
+| ----- | ------------------- | ------------------------------------- | --------------------- |
+| [str] | <code>string</code> | <code>&quot;&#x27;&#x27;&quot;</code> | the string to reverse |
 
 [TOP](#DOCS)
 
