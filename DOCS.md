@@ -11,6 +11,7 @@
   - [repeat-word-or-characters.js](#srcinteractionsrepeat-word-or-charactersjs)
   - [reverse-word.js](#srcinteractionsreverse-wordjs)
 - [logic](#logic)
+  - [remove-characters.js](#srclogicremove-charactersjs)
   - [repeat-characters.js](#srclogicrepeat-charactersjs)
   - [repeat-string.js](#srclogicrepeat-stringjs)
   - [reverse-string.js](#srclogicreverse-stringjs)
@@ -85,6 +86,23 @@ Here are some general rules for your logic functions:
 - they will always return a value
 - they only use console.log
 - they cannot use prompt, alert, or confirm
+
+---
+
+## [./src/logic/remove-characters.js](./src/logic/remove-characters.js?study)
+
+<a name="removeCharacters"></a>
+
+## removeCharacters([text], [charactersToRemove]) ⇒ <code>string</code>
+
+removes all the provided characters from a string
+
+**Returns**: <code>string</code> - new string with all provided characters removed
+
+| Param                | Type                | Default                               | Description                    |
+| -------------------- | ------------------- | ------------------------------------- | ------------------------------ |
+| [text]               | <code>string</code> | <code>&quot;&#x27;&#x27;&quot;</code> | text to remove characters from |
+| [charactersToRemove] | <code>string</code> | <code>&quot;&#x27;&#x27;&quot;</code> | string of characters to remove |
 
 ---
 
