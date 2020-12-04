@@ -79,11 +79,13 @@ const enterWord = (message = 'enter a word') => {
 
 ## Features
 List of features ready and TODOs for future development
+
 * 
 * 
 * 
 
 To-do list:
+
 * 
 * 
 
