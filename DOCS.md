@@ -9,6 +9,7 @@
 - [data.js](#srcdatajs)
 - [interactions](#interactions)
   - [clear-word.js](#srcinteractionsclear-wordjs)
+  - [display-word.js](#srcinteractionsdisplay-wordjs)
   - [repeat-word-or-characters.js](#srcinteractionsrepeat-word-or-charactersjs)
   - [reverse-word.js](#srcinteractionsreverse-wordjs)
   - [set-word.js](#srcinteractionsset-wordjs)
@@ -22,6 +23,8 @@
   - [enter-number.js](#srcpromptsenter-numberjs)
   - [enter-word.js](#srcpromptsenter-wordjs)
 - [renders](#renders)
+  - [before-and-after.js](#srcrendersbefore-and-afterjs)
+  - [describe-word.js](#srcrendersdescribe-wordjs)
 
 <!-- END TOC -->
 
@@ -63,6 +66,17 @@ Here are some general rules for your interaction functions:
 
 if there is a favorite word, the user is asked to confirm before clearing it.
 if there is no saved word the user is told there is no word to clear
+
+---
+
+## [./src/interactions/display-word.js](./src/interactions/display-word.js?study)
+
+<a name="displayWord"></a>
+
+## displayWord()
+
+displays the saved word if there is one.
+if there is no saved word, it tells the user so
 
 ---
 
@@ -270,6 +284,41 @@ Here are some general rules for your render functions:
 - they will return a formatted version of your data
 - they can only use console.log
 - they cannot use prompt, alert or confirm (you will alert the return value)
+
+---
+
+## [./src/renders/before-and-after.js](./src/renders/before-and-after.js?study)
+
+<a name="beforeAndAfter"></a>
+
+## beforeAndAfter(beforeValue, afterValue, [description]) ⇒ <code>string</code>
+
+renders two strings into a before/after comparison
+
+**Returns**: <code>string</code> - a formatted before/after message
+
+| Param         | Type                | Default                               | Description                       |
+| ------------- | ------------------- | ------------------------------------- | --------------------------------- |
+| beforeValue   | <code>string</code> |                                       | string before transformation      |
+| afterValue    | <code>string</code> |                                       | string after transformation       |
+| [description] | <code>string</code> | <code>&quot;&#x27;&#x27;&quot;</code> | describing what changes were made |
+
+---
+
+## [./src/renders/describe-word.js](./src/renders/describe-word.js?study)
+
+<a name="describeWord"></a>
+
+## describeWord([word], [message]) ⇒ <code>string</code>
+
+a function to combine a word and a message into full description
+
+**Returns**: <code>string</code> - a rendered message describing the word
+
+| Param     | Type                | Default                                             | Description               |
+| --------- | ------------------- | --------------------------------------------------- | ------------------------- |
+| [word]    | <code>string</code> | <code>&quot;&#x27;&#x27;&quot;</code>               | the word to render        |
+| [message] | <code>string</code> | <code>&quot;&#x27;here is a word&#x27;&quot;</code> | used to describe the word |
 
 [TOP](#DOCS)
 
