@@ -10,12 +10,16 @@
 - [interactions](#interactions)
   - [repeat-word-or-characters.js](#srcinteractionsrepeat-word-or-charactersjs)
   - [reverse-word.js](#srcinteractionsreverse-wordjs)
+  - [set-word.js](#srcinteractionsset-wordjs)
 - [logic](#logic)
   - [remove-characters.js](#srclogicremove-charactersjs)
   - [repeat-characters.js](#srclogicrepeat-charactersjs)
   - [repeat-string.js](#srclogicrepeat-stringjs)
   - [reverse-string.js](#srclogicreverse-stringjs)
 - [prompts](#prompts)
+  - [choose-from-options.js](#srcpromptschoose-from-optionsjs)
+  - [enter-number.js](#srcpromptsenter-numberjs)
+  - [enter-word.js](#srcpromptsenter-wordjs)
 - [renders](#renders)
 
 <!-- END TOC -->
@@ -69,6 +73,19 @@ if there is no word, the user is told so
 
 allows a user to set a new value for the saved word.
 if there's already a saved word, they are asked to confirm replacing it
+
+---
+
+## [./src/interactions/set-word.js](./src/interactions/set-word.js?study)
+
+<a name="setWord"></a>
+
+## setWord()
+
+allows a user to set a new value for the saved word.
+if there is no saved word, the user is told so and the interaction ends.
+if there is a saved word, the user is asked to confirm replacing it.
+if the user confirms, they enter a new word that replaces the old one.
 
 [TOP](#DOCS)
 
@@ -171,6 +188,59 @@ Here are some general rules for your prompt functions:
 - they will always return a value
 - they must use at least one prompt() or confirm()
 - they can also use alert & console.log
+
+---
+
+## [./src/prompts/choose-from-options.js](./src/prompts/choose-from-options.js?study)
+
+<a name="chooseFromOptions"></a>
+
+## chooseFromOptions([options], [instructions]) ⇒ <code>string</code>
+
+presents a user with a list of options
+continually prompts the user until they select an option from the list
+
+**Returns**: <code>string</code> - the selected option
+
+| Param          | Type                              | Default                                        | Description                        |
+| -------------- | --------------------------------- | ---------------------------------------------- | ---------------------------------- |
+| [options]      | <code>Array.&lt;string&gt;</code> | <code>[&#x27;yes&#x27;, &#x27;no&#x27;]</code> | the options a user can select from |
+| [instructions] | <code>string</code>               | <code>&quot;&#x27;pick one&#x27;&quot;</code>  | to explain the options to the user |
+
+---
+
+## [./src/prompts/enter-number.js](./src/prompts/enter-number.js?study)
+
+<a name="enterNumber"></a>
+
+## enterNumber([message]) ⇒ <code>number</code>
+
+prompts the user for a number, casts and validates their input
+it will prompt the user until a valid number is entered
+
+**Returns**: <code>number</code> - a number cast from the user input (never NaN)
+
+| Param     | Type                | Default                                             | Description                    |
+| --------- | ------------------- | --------------------------------------------------- | ------------------------------ |
+| [message] | <code>string</code> | <code>&quot;&#x27;enter a number&#x27;&quot;</code> | the text displayed to the user |
+
+---
+
+## [./src/prompts/enter-word.js](./src/prompts/enter-word.js?study)
+
+<a name="enterWord"></a>
+
+## enterWord([message]) ⇒ <code>string</code>
+
+a function that prompts the user to enter a word
+if the user enters nothing or cancels, it will prompt them again
+if the input must contain only letters or a hyphen, or it will prompt again
+
+**Returns**: <code>string</code> - the user input, it will not be empty
+
+| Param     | Type                | Default                                           | Description                           |
+| --------- | ------------------- | ------------------------------------------------- | ------------------------------------- |
+| [message] | <code>string</code> | <code>&quot;&#x27;enter a word&#x27;&quot;</code> | what the user will read in the prompt |
 
 [TOP](#DOCS)
 
