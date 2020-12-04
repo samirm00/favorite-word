@@ -29,8 +29,13 @@ const repeatWordOrCharacters = () => {
     newString = repeatCharacters(favoriteWord, repeat);
   }
   // 5. render a final before/after message with favoriteWord and the new string from ^ up there
-  const finalMessage = beforeAndAfter(favoriteWord, newString, 'repeat word or characters')
+
+  let finalMessage = beforeAndAfter(favoriteWord, newString, 'all the vowels or consonants removed');
+
+  
   // 6. alert the rendered message
+
+  
   alert(finalMessage);
 
 
