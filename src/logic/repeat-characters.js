@@ -8,11 +8,19 @@ console.log('--- loading logic --> ');
  * @param {number} [repetitions=1] - how many time to repeat each character
  * @returns {string} the string with each character repeated
  */
-const repeatCharacters = () => {};
+const repeatCharacters = (text = '', repetitions = 1) => {
+  let repreatedChar = '';
+  for (let character of text) {
+    let charact = character.repeat(repetitions);
+    repreatedChar = repreatedChar + charact;
+
+  }
+  return repreatedChar;
+};
 
 {
   const consoleLog = console.log;
-  console.log = () => {};
+  console.log = () => { };
 
   try {
     console.assert(repeatCharacters('asdf') === 'asdf', 'Test 0 a');
@@ -26,7 +34,7 @@ const repeatCharacters = () => {};
     console.assert(repeatCharacters('', 2) === '', 'Test 7');
     console.assert(
       repeatCharacters('mississippi', 7) ===
-        'mmmmmmmiiiiiiissssssssssssssiiiiiiissssssssssssssiiiiiiippppppppppppppiiiiiii',
+      'mmmmmmmiiiiiiissssssssssssssiiiiiiissssssssssssssiiiiiiippppppppppppppiiiiiii',
       'Test 8'
     );
   } catch (err) {
