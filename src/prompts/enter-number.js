@@ -9,38 +9,33 @@ console.log('--- loading prompt --> ');
  * @returns {number} a number cast from the user input (never NaN)
  */
 const enterNumber = (message = 'enter a number') => {
-  let userNumber = 0;
-  while (true) {
-    let promptMessage = 'Please , enter a number '
-    let userInput = prompt(promptMessage);
+  let userNumber = NaN;
+  let userConfirmed = false;
+  while (!userConfirmed) {
+
+    const userInput = prompt(message);
+    console.log('userInput:', typeof userInput, userInput);
+
     if (userInput === '' || userInput === null) {
-      alert('You enter nothing! why?')
+      alert('nope, enter something');
       continue;
     }
 
     userNumber = Number(userInput);
+    console.log('userNumber:', typeof userNumber, userNumber);
+
     if (Number.isNaN(userNumber)) {
-      alert(' you did not enter a number!');
+      alert('"' + userInput + '" is not a number');
       continue;
     }
 
-    confirmMessage = 'your number is "' + userNumber + '" is that correct ?';
-    userConfirm = confirm(confirmMessage);
-
-    if (userConfirm) {
-      finalMessgae = 'your number is "' + userNumber + '"';
-      alert(finalMessgae);
-      break;
-
-    } else {
-      alert(' then what is your number');
-      continue;
-    }
-
+    const confirmMessage = 'is this correct?\n\n' + userInput;
+    userConfirmed = confirm(confirmMessage);
+    console.log('userConfirmed:', typeof userConfirmed, userConfirmed);
 
   }
-  return userNumber;
 
+  return userNumber;
 };
 
 {
