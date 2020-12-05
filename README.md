@@ -15,7 +15,7 @@ the user to reverse , remove vowels or consonants , repeat characters or his fav
 
 ## General info
 
-The program is a part of HYF BE boot camp curriculum , the main goal , is using different function and call them from different JS files , and understand the different type of functions `prompt`,`interaction`,`logic` and `render` functions
+The program is a part of HYF BE bootcamp curriculum , the main goal , is using different function and call them from different JS files , and understand the different type of functions `prompt`,`interaction`,`logic` and `render` 
 
 ## Screenshots
 ![Example screenshot](/img/favorite-word.png)
@@ -99,4 +99,4 @@ Project is: _in progress_
 Project inspired by  HackYourFuture BE
 
 ## Contact
-Created by [@Group2] 
+Created by [@Ina-arpine,@jraoul2002,@kemmy72,@LiubovPlugar,@samirm00] 
