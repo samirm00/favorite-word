@@ -1,7 +1,7 @@
 # Favorite word 
 
-> A simple program allows the user to enter his favorite word , and displays it , or remove it.In addition it allows 
-the user to reverse , remove vowels or consonants , repeat characters or his favorite word number of times.
+> A simple program allows the user to enter his favorite word , and displays it , or removes it.In addition it allows 
+the user to reverse , remove vowels or consonants , repeat word or characters of his favorite word number of times.
 
 ## Table of contents
 * [General info](#general-info)
